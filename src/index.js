@@ -9,18 +9,7 @@ import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root')); //가상돔(Virtual DOM)을 만듦
 
-/*
-root.render(            //App이라는 태그를 가지고 와서 root를 렌더링!
-                        //태그는 여러번 사용 가능
-                        //React.StrictMode : 두번씩 콘솔 찍힘
-    <App />
 
+root.render(            
+    <App />
 );
-*/
-
-setInterval(()=>{   //1초마다 렌더링 하는데, 바뀌는 부분만 렌더링 해줌
-  root.render(
-
-    <App />
-  )
-}, 1000);
