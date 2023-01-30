@@ -18,13 +18,32 @@ h1 {
     align-items: center;               /*세로정렬*/
     height: 90vh;
 }
-.rowDiv {
+.rowDiv, .rowDiv0 {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 60vw;
     height: 6vh;
     border-bottom: 1px solid gray;
+}
+
+.rowDiv0 {
+
+    font-weight: bold;
+}
+.rowDiv:hover, .rowDiv:active {
+    background-color: beige;
+}
+
+.rowDay {
+    width: 60vw;
+    height: 6vh;
+    padding: 10px;
+    background-color: brown;
+    color: white;
+    display: flex;
+    justify-content: left;
+    align-items: center;
 }
 
 .col {
@@ -47,4 +66,12 @@ h1 {
 
 #colrankInten {
     width: 10%;
+}
+
+.spup {
+    color: brown;
+}
+
+.spdown {
+    color: blue;
 }

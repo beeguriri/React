@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const Boxmain = () => {
 
     const mvlist = [
@@ -12,37 +14,61 @@ const Boxmain = () => {
         {"rnum":"9","rank":"9","rankInten":"-1","rankOldAndNew":"OLD","movieCd":"20228313","movieNm":"오늘 밤, 세계에서 이 사랑이 사라진다 해도","openDt":"2022-11-30","salesAmt":"49429844","salesShare":"2.6","salesInten":"-16882910","salesChange":"-25.5","salesAcc":"10112965111","audiCnt":"4868","audiInten":"-2184","audiChange":"-31","audiAcc":"980655","scrnCnt":"241","showCnt":"355"},
         {"rnum":"10","rank":"10","rankInten":"0","rankOldAndNew":"OLD","movieCd":"20229518","movieNm":"천룡팔부: 교봉전","openDt":"2023-01-25","salesAmt":"15848197","salesShare":"0.8","salesInten":"-3804460","salesChange":"-19.4","salesAcc":"48516954","audiCnt":"1754","audiInten":"-482","audiChange":"-21.6","audiAcc":"5202","scrnCnt":"259","showCnt":"393"}]
     
-    console.log(mvlist);        //데이터가 배열로 들어온 것 확인
-    
-    let divTags = [] ;  //div 태그(row) 10개
-    const klist = ['rank', 'movieNm', 'salesAmt', 'rankInten']      //추출할 데이터의 key 목록
 
-     //case 5 : map함수 : 새로운 배열을 만들어줌. 추천방법!
-    //klist의 갯수만큼 새로운 배열이 생성 됨
-    for(let item of mvlist) {       //배열을 Object로 가져와서 -> Object 중에 필요한 key값에 해당하는 값을 배열로 저장 
+    let [dspmv, setDspmv] = useState({});
 
-        let temp = [];
-        console.log(item)
+    const handleDivClick = (selmv) => {
+//      console.log(selmv);                 //클릭하면 데이터 선택되는지 확인
+        setDspmv({...selmv});
+        console.log(dspmv);
+    };
 
-        temp = klist.map((k) => <span key={item.movieCd + k} className="col" id={`col${k}`}>{item[k]}</span>);  //id : col+key값
-        console.log(temp);
-        divTags.push(<div key={item.movieCd} className="rowDiv">{temp}</div>);                 //rowDiv를 여러번 만들기, push 10번 됨
-        console.log(divTags);
+//  console.log(mvlist);        //데이터가 배열로 들어온 것 확인
+    let divTags = [] ;
 
+    for (let mv of mvlist) {       //배열의 인덱스 하나씩 접근
+
+//      console.log(mv);                                              //데이터가 오브젝트 타입
+//      console.log(mv.rank, mv.movieNm, mv.salesAmt, mv.rankInten);  //데이터가 문자열로 찍힘
+
+        let inten = '-' ;
+        if(mv.rankInten > 0) {
+            inten = <span className="spup">{'▲ ' + mv.rankInten}</span>;    //span tag랑 같이 써서 {} 사용
+        }
+        else if (mv.rankInten < 0) {
+            inten = <span className="spdown">{'▼ ' + -(mv.rankInten)}</span>;
+        }
+
+        divTags.push(                                                 //push : 배열에 데이터 넣기
+                                                                      //각각 div의 키가 유일해야함
+                                                                      //인수를 전달하고싶을때는 콜백함수 형태로 사용
+            <div className="rowDiv" key={mv.movieCd} onClick={() => handleDivClick(mv)}>        
+                <span className="col" id="colrank">{mv.rank}</span>
+                <span className="col" id="colmovieNm">{mv.movieNm}</span>
+                <span className="col" id="colsalesAmt">{parseInt(mv.salesAmt).toLocaleString('ko-KR')}</span>
+                <span className="col" id="colrankInten">{inten}</span>
+            </div>
+        );  
     }
 
     return(
 
         <div className="content">
-            <div className="rowDiv">
+            <div className="rowDiv0">
                 <span className="col" id="colrank">순위</span>
                 <span className="col" id="colmovieNm">영화명</span>
                 <span className="col" id="colsalesAmt">매출액</span>
                 <span className="col" id="colrankInten">증감률</span>
             </div>
-            {divTags}  
-        </div>
 
+            {divTags}  
+
+            <div className="rowDay"> 
+                <strong>
+                    [{dspmv.movieNm}] 개봉일 : {dspmv.openDt}
+                </strong>
+            </div>
+        </div>
     );
 }
 

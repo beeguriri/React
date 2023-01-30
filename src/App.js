@@ -4,7 +4,9 @@ import Box from './02/Box';
 const App = () => {              
   
   return ( 
-    <Box />
+    <div>
+      <Box />
+    </div>
   );
 }
 
