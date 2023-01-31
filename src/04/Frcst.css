@@ -1,0 +1,73 @@
+.header {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkblue;
+    color: white;
+}
+
+.main {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+}
+
+.mainbox1, .mainbox2 {
+    height: 90vh;
+    display: flex;
+    margin-top: 20px;
+}
+
+.mainbox1 {
+    width: 30vw;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+}
+.mainbox2 {
+    width: 50vw;
+    justify-content: center;
+    align-items: top;
+}
+
+.dtdiv1 {
+    display: flex;
+    width: 20vw;
+    height: 8vh;
+    border: 1px solid gray;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    font-size: 14px;
+}
+
+.dtdiv1:hover, .dtdiv1:active {
+
+    background-color: darkblue;
+    color: white;
+    font-size: 20px;
+}
+
+.detail {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gold;
+    background-color: beige;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+@keyframes blink-effect { 50% { opacity: 0; } } 
+.lired {
+    color: white;
+    background-color: red;
+    animation: blink-effect 0.5s step-end infinite; 
+}
