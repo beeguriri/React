@@ -1,8 +1,7 @@
 import './Frcst.css';
-import Frcheader from './Frcheader'
-import Frcdt from './Frcdt'
-import Frccn from './Frccn'
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+
+//1.31작업 (컴포넌트 나누지않고 한번에 작성)
 
 const Frcst = () => {
     /* 공공데이터포털 : 한국환경공단_에어코리아_대기오염정보
@@ -17,8 +16,7 @@ const Frcst = () => {
     frcstFourDt : 넷째날예보일시
     */
 
-//    let [cn, setCn] = useState() ;
-
+    const [info, setInfo] = useState();
     const items = [
         {
         "frcstFourDt":"2023-02-05",
@@ -34,56 +32,63 @@ const Frcst = () => {
         }
     ]
 
-    //키로 사용할 배열을 만들어줌
-    let frcdt = ["frcstOneDt", "frcstTwoDt", "frcstThreeDt", "frcstFourDt"];    
-    let frccn = ["frcstOneCn", "frcstTwoCn", "frcstThreeCn", "frcstFourCn"];
+    let item = items[0];    //데이터타입 : 배열 -> 오브젝트
+    console.log(item);
 
-    //map함수 사용 map( () => 한줄짜리 명령 )
-    //key값이 돌면서 items[0]번째의 key값을 찾아서 배열로 만들어줌
-    frcdt = frcdt.map((k) => items[0][k]) ; 
-    frccn = frccn.map((k) => items[0][k]) ; 
+    //선택한 날짜에 따라 해당 정보값 출력해주는 함수 만들기
+    const showInfo = (seldt) => {       
+        
+        console.log(seldt);
+        let infoArry;
 
- //   console.log(frcdt);
- //   console.log(frccn);
+        // eslint-disable-next-line default-case       
+        switch (seldt) {    
+            case 1 : infoArry = item.frcstOneCn.split(','); break;
+            case 2 : infoArry = item.frcstTwoCn.split(','); break;
+            case 3 : infoArry = item.frcstThreeCn.split(','); break;
+            case 4 : infoArry = item.frcstFourCn.split(','); break;
+        }
 
-    //일자별 예보 오브젝트 생성(key : frcdt, value : frccn)
-    let frcobj = {};
+        // v.includes('높음') ? 
+        // <li key={`${v}-${seldt}`} style={{color:'red', backgroundColor: 'white'}}>{v}</li> : 
+        // <li key={`${v}-${seldt}`}>{v}</li>
 
-    //배열.entries() : 배열의 인덱스를 뽑아냄
-    for (let [idx, k] of frcdt.entries()) {
-//      console.log('idx=', idx, 'key_value=', k, 'cn_value=', frccn[idx]);
-        frcobj[k] = frccn[idx];
+
+        infoArry = infoArry.map((v) => 
+            
+            v.includes('높음') ?
+            <li key={`${v}-${seldt}`}>
+                <span>{v.split(':')[0]}</span>
+                <span className='lired'>{v.split(':')[1]}</span> 
+            </li> :
+            <li key={`${v}-${seldt}`}>{v}</li>
+        );
+
+        console.log(infoArry);
+
+        setInfo(infoArry);
     }
-
-//  console.log('fcrobj :', frcobj)
-
-    /*forEach(() => {}) 함수 사용
-    const obj = {};
-
-    frcdt.forEach((k, idx) => {
-      obj[k] = frccn[idx];
-    });
-    
-    console.log('obj :', obj);
-    */  
-    
-    //state함수 사용
-    let [cn, setCn] = useState(frcobj["2023-02-02"]) ;  
-    let [dt, setDt] = useState() ;
-
-    useEffect(() => {
-        console.log('useeffect', frcobj[dt]);
-        frcobj[dt] && setCn(frcobj[dt]);
-    }, [dt]);
-
+        
     return (
         <>
-            <Frcheader />
-            <p>{dt}</p>
-
+            <div className="header">
+                <h1>미세먼지 예보</h1>
+            </div>
             <div className="main">
-                <Frcdt dt = {frcdt} setDt = {setDt}/>
-                <Frccn cn = {cn}/>
+                <div className="mainbox1">
+                    <div className='dtdiv1' onClick={() => showInfo(1)}>{item.frcstOneDt}</div>
+                    <div className='dtdiv1' onClick={() => showInfo(2)}>{item.frcstTwoDt}</div>
+                    <div className='dtdiv1' onClick={() => showInfo(3)}>{item.frcstThreeDt}</div>
+                    <div className='dtdiv1' onClick={() => showInfo(4)}>{item.frcstFourDt}</div>
+                </div>
+
+                <div className="mainbox2">
+                    <div className='detail'>
+                        <ul>
+                            {info}
+                        </ul>
+                    </div>
+                </div>
             </div>
         </>
     ) ;
