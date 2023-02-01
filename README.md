@@ -1,29 +1,17 @@
-# Getting Started with Create React App
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 + Local Path D:\HJ\React\Work\lecreact
++ ### `npm start`  `npm run build`
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Folder Index
++ 01 : 시계만들기
++ 02 : 박스오피스 (useState() 사용)
++ 03 : probs, useState 실습
++ 04 : 미세먼지예보
+  + json데이터 object -> array -> object, map 사용 
+  + probs 사용
+  + useState, useEffect 사용
 
 # React Project 1 : 시계만들기
 + https://reactclock-209e7.web.app/
