@@ -68,22 +68,28 @@ const Frcst = () => {
     */  
     
     //state함수 사용
-    let [cn, setCn] = useState(frcobj["2023-02-02"]) ;  
+    let [cn, setCn] = useState(frccn[0]) ;  
     let [dt, setDt] = useState() ;
 
+    //날짜가 변경되면 useEffect 실행
+    
     useEffect(() => {
-        console.log('useeffect', frcobj[dt]);
+//        console.log('useeffect', frcobj[dt]);
+
+        //처음에 dt에 값이 없으므로 && 뒤에 실행 안함
+        //dt 찍으면 [dt]가 바뀌고, dt에 값이 생기므로 && 뒤에 실행 -> setCn으로 cn도 바꿈
+        //dt 정의되지않으면 setCn에 내용 안나타나게 하기위하여
         frcobj[dt] && setCn(frcobj[dt]);
+
     }, [dt]);
 
     return (
         <>
             <Frcheader />
-            <p>{dt}</p>
 
             <div className="main">
-                <Frcdt dt = {frcdt} setDt = {setDt}/>
-                <Frccn cn = {cn}/>
+                <Frcdt frcdt = {frcdt} setDt = {setDt}/>
+                {dt && <Frccn dt = {dt} cn = {cn}/>}
             </div>
         </>
     ) ;

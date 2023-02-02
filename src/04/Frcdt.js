@@ -1,12 +1,12 @@
-const Frcdt = ({dt, setDt}) => {
+const Frcdt = ({frcdt, setDt}) => {
 
-    //console.log('probs.frcdt :', probs.frcdt)
+    console.log('probs.frcdt :', frcdt)
     //probs : frcdt (날짜데이터)
 
-    let dtdiv1Tag = [...dt]; //배열의 갯수는 probs의 갯수에 따름 -> 전개연산자(...) 사용
+    let dtdiv1Tag = [...frcdt]; //배열의 갯수는 probs의 갯수에 따름 -> 전개연산자(...) 사용
 
     const show = (v) => {
-        console.log("show", v)
+//        console.log("show", v)
         setDt(v);
     }
     
