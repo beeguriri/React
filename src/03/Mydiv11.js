@@ -1,6 +1,7 @@
 const Mydiv11 = (probs) => {
 
     const user = probs.user;
+
     console.log("div11", probs);
 
     return(

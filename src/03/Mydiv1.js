@@ -9,7 +9,7 @@ const Mydiv1 = (probs) => {
 
     const addCnt = () => {
 
-        setCnt(cnt++);
+        setCnt(++cnt);
         console.log(cnt);
     }
 

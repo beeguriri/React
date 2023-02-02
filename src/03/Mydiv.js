@@ -5,7 +5,7 @@ import './Mydiv.css';
 
 const Mydiv = () => {                 //리액트의 함수형 컴포넌트는 반드시 대문자로 시작, 파일명과 똑같을 것
 
-    const rname = 'React!!' ;
+    const rname = 'React!!!' ;
 
     return(
 
