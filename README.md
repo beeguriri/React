@@ -1,9 +1,3 @@
-## Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-+ Local Path D:\HJ\React\Work\lecreact
-+ ### `npm start`  `npm run build`
-
 ## Folder Index
 + 01 : 시계만들기
 + 02 : 박스오피스 (useState() 사용)
@@ -13,5 +7,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
   + probs 사용
   + useState, useEffect 사용
 
-# React Project 1 : 시계만들기
+## React Project 1 : 시계만들기
 + https://reactclock-209e7.web.app/
+
+##      
+  + Local Path D:\HJ\React\Work\lecreact
+  + ### `npm start`  `npm run build`
