@@ -6,6 +6,8 @@
   + json데이터 object -> array -> object, map 사용 
   + probs 사용
   + useState, useEffect 사용
++ 05 : 교통사고 유형별 사고현황
+  + 필요한 데이터 형태로 가공 objec <-> array
 
 ## React Project 1 : 시계만들기
 + https://reactclock-209e7.web.app/
