@@ -210,9 +210,21 @@ const Taccident = () => {
       let cobj2 = {};
       for(let [k,v] of c11.entries()) {
  
-        cobj2[v] += ',' + c21[k]
+        cobj2[v] = [(cobj2[v] + ',' + c21[k]).split(',')]
       }
+      //결과가 얼추 비슷하게 나온거 같은데 undefined 어떻게 없애지?
       console.log('cobj2', cobj2); 
+
+      let cobj3 = {};
+      for(let [k,v] of c11.entries()) {
+        cobj3[v] = c2[k]
+        
+        //c2.includes(c11) && objdata.map((item) => 
+        //   [item.사고유형_대분류 + ',' +item.사고유형_중분류]
+        //);
+        
+      }
+      console.log('cobj3', cobj3); 
     
     
     return (
