@@ -207,7 +207,14 @@ const Taccident = () => {
 
       //숙제 : "key : 차대사람, 내용[] : 중분류"
       //{"차대사람" : ["횡단중", "차도통행중", "길가장자리구역통행중", "보도통행중", "기타"]} 나오게
-
+      let cobj2 = {};
+      for(let [k,v] of c11.entries()) {
+ 
+        cobj2[v] += ',' + c21[k]
+      }
+      console.log('cobj2', cobj2); 
+    
+    
     return (
         <>
         </>
