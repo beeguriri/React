@@ -1,3 +1,5 @@
+import Taccidentm from "./Taccidentm";
+
 const Taccident = () => {
     const apiData = {
         "currentCount": 15,
@@ -145,90 +147,75 @@ const Taccident = () => {
 
       } ;
 
-      //자바스크립트 오브젝트는 kye와 value의 배열로 분리 가능
-      let objk = Object.keys(apiData);
-      let objv = Object.values(apiData)
-      console.log("object key", objk)
-      console.log("object value", objv)
+    //console.log("apiData", apiData)
+    //apiData : object type
 
-      //배열의 map
-      let newv;
-      newv = objk.map((k)=>apiData[k]); //object key로 object(apiData) 순회하면 => 나오는 값은 value!
-      console.log("새로운배열", newv)
+    //세부내용 순회하는건 무조건 for문
+    //for...in : object type 데이터의 key값 옴
+    /*
+    for(let item in apiData) {
+      //console.log("apiData_item", item);
+    }
 
-      //배열의 filter
-      let data ;
-      data = objk.filter((k) => k=='data'); //object key값을 지정하여 
-      data = data.map((k)=>apiData[k])      //원하는 값 뽑아옴
-      console.log("필터", data)
+    for(let item in Object.keys(apiData)){
+     // console.log("apiData_KEY", item);
+    }
 
-      //object key로 접근
-      let objdata, objdata1;
-      objdata = apiData.data;
-      console.log("object key값으로 접근", objdata)
+    for(let item in Object.values(apiData)){
+    //  console.log("apiData_value", item);
+    }
+*/
+    let c1, c2, data;
 
-      objdata1 = apiData['data'];
-      console.log("object key값으로 접근2", objdata1)
+    //data : 상세 데이터
+    data = apiData.data;
+    //console.log("data", data)
 
-      //대분류 추출
-      let c1 = objdata.map((item) => item.사고유형_대분류)   //item : object
-      console.log("대분류추출 1단계", c1);
-      c1 = new Set(c1);
-      console.log("대분류추출 2단계 - Set으로 중복제거", c1);
-      c1 = [...c1]  //스프레드연산자로 배열로 분해하기
-      console.log("대분류추출 3단계 - Set을 배열로 변환", c1);
+    //c1[] : 대분류
+    c1 = data.map((item) => item["사고유형_대분류"]);  //"사고유형_대분류"의 값을 하나씩 가져와서 배열로 만들어줌
+    //console.log("c1", c1)                             //c1은 data 15개의 array
+    c1 = new Set(c1);                                 //c1의 중복제거, 타입 : set
+    //console.log("중복제거 c1", c1);
+    c1 = [...c1];                                    //set을 다시 배열로
+    console.log("배열변환c1", c1);
 
-      //중분류 추출 (2가지 방법)
-      let c2 = objdata.map((item) => 
-      
-          //(item.사고유형_대분류 + ',' +item.사고유형_중분류).split(',')
-          [item.사고유형_대분류 + ',' +item.사고유형_중분류]
-      )
-      console.log("중분류추출", c2);
+    //c2[,] : 중분류
+    //c2 = data.map((item)=>item["사고유형_중분류"]);   
+    //"사고유형_중분류"의 값을 하나씩 가져와서 배열로 만들어주면 대분류당 기타가 구분이 안됨
 
-      //배열의 entries
-      for(let [k,v] of c2.entries()) {
-        console.log('k ', k, ', v=', v)
-      }
+    c2 = [];
+    for(let item of data) {
+      let temp = []; 
+      temp.push(item.사고유형_대분류);
+      temp.push(item.사고유형_중분류);
+      c2.push(temp);
+    };
 
-      //배열
-      let c11 = objdata.map((item) => item.사고유형_대분류);
-      let c21 = objdata.map((item) =>item.사고유형_중분류);
-      console.log('c11', c11)
-      console.log('c21', c21)
+    /*방법 2*/
 
-      //배열을 obj로할때 중복된 key가 있으면 key에 해당하는 제일 마지막 값만 저장함
-      let cobj = {};
-      for(let [k,v] of c21.entries()) {
-        cobj[v] = c11[k];           
-      }
-
-      console.log('cobj', cobj);      //기타항목에 매칭되는 값이 없어짐
-
-      //숙제 : "key : 차대사람, 내용[] : 중분류"
-      //{"차대사람" : ["횡단중", "차도통행중", "길가장자리구역통행중", "보도통행중", "기타"]} 나오게
-      let cobj2 = {};
-      for(let [k,v] of c11.entries()) {
+    console.log("c2", c2);
+    
+    //중분류를 대분류key로 가져올 수 없나..? (코드는 수정)
+    // for (let [idx, k] of c1.entries()) {
+    // //      console.log('idx=', idx, 'key_value=', k, 'cn_value=', frccn[idx]);
+    //         c2obj[k] = c2[idx];
+    // }
+/*
+    let cobj2 ={};
+    for(let [k,v] of c1.entries()) {
  
-        cobj2[v] = [(cobj2[v] + ',' + c21[k]).split(',')]
-      }
-      //결과가 얼추 비슷하게 나온거 같은데 undefined 어떻게 없애지?
-      console.log('cobj2', cobj2); 
+      cobj2[v] = (cobj2[v] + ',' + c2[k]).split(',')
+      //cobj2[v].pop(0);
+      console.log("a", (cobj2[v] , ',' , c2[k]))
+      console.log("b", (cobj2[v] + ',' + c2[k]))
 
-      let cobj3 = {};
-      for(let [k,v] of c11.entries()) {
-        cobj3[v] = c2[k]
-        
-        //c2.includes(c11) && objdata.map((item) => 
-        //   [item.사고유형_대분류 + ',' +item.사고유형_중분류]
-        //);
-        
-      }
-      console.log('cobj3', cobj3); 
-    
-    
+    }
+      console.log(cobj2);
+
+*/
     return (
         <>
+          <Taccidentm c1 = {c1} c2 = {c2} data = {data}/>
         </>
     ) ;
 }

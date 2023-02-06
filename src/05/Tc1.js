@@ -1,9 +1,19 @@
-const Tc1 = ({c1}) => {
+const Tc1 = ({c1, selC1, setSelC1}) => {
 
+    //대분류가 클릭되었을 때
+    const handleSelect = (item) => {
+
+        setSelC1(item);
+
+    };
+
+    //대분류 화면 표시 태그
     let tc1Tag = [...c1]; //배열의 갯수는 probs의 갯수에 따름 -> 전개연산자(...) 사용
-    tc1Tag = tc1Tag.map((v) => 
+    tc1Tag = tc1Tag.map((item) => 
 
-        <div className="tc1Tag" key={v} >{v}</div>
+        <div className={item === selC1 ? "tc1Sel" : "tc1Tag"} key={item} onClick={()=> handleSelect(item)}>
+            {item}
+        </div>
     );
 
     return(

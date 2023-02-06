@@ -40,6 +40,8 @@
     width: 25vw;
 }
 
+
+
 .tdetail {
     width: 50vw;
 }
@@ -55,15 +57,14 @@
 
 .detailbox {
     width : 80%;
-    height: 50%;
+    height: 40Vh;
     display: flex;
     flex-direction: column;
     justify-content: top;
     align-items: center;
-    border: 1px solid gray;
 }
 
-.tc1Tag, .tc2Tag {
+.tc1Tag, .tc2Tag, .tc1Sel, .tc2Sel{
     display: flex;
     width: 15vw;
     height: 7vh;
@@ -73,4 +74,59 @@
     align-items: center;
     margin: 7px;
     font-size: 17px;
+}
+
+.tc2Tag, .tc2Sel{
+    width: 18vw;
+}
+
+.tc1Tag:hover, .tc1Tag:active, .tc2Tag:hover, .tc2Tag:active, .tc1Sel, .tc2Sel {
+    background-color: darkblue;
+    color: white;
+    font-size: 20px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+ul > li {
+    display: flex;
+    margin: 2px;
+    justify-content: center;
+    align-items: center;
+}
+.sp1, .sp11 {
+    display: inline-flex;
+    width : 30%;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    background-color: darkblue;
+    color: white;
+    font-size: 15px;
+}
+
+.sp2, .sp21 {
+    display: inline-flex;
+    width : 30%;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 15px;
+}
+
+@keyframes blink-effect { 50% { opacity: 50%; } } 
+.sp11 {
+    background-color: brown;
+    font-weight: bold;
+    animation: blink-effect 0.5s step-end infinite; 
+}
+.sp21 {
+    color: brown;
+    font-weight: bold;
 }

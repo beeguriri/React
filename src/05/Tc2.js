@@ -1,12 +1,19 @@
-const Tc2 = ({c2}) => {
+const Tc2 = ({selC2A, selC2, setSelC2}) => {
 
-    console.log('c2[0,1]', c2[0][1]) //횡단중
-    console.log('c2[1,1]', c2[1][1]) //차도통행중
+    //console.log('c2[0,1]', c2[0][1]) //횡단중
+    //console.log('c2[1,1]', c2[1][1]) //차도통행중
 
-    let tc2Tag = [...c2]; //배열의 갯수는 probs의 갯수에 따름 -> 전개연산자(...) 사용
+    //중분류가 선택되었을때
+    const handleSelect = (item) => {
+        console.log("SelC2", item)
+        setSelC2(item[1]);
+    };
 
-    tc2Tag = tc2Tag.map((v) => 
-        <div className="tc2Tag" key={v} >{v[1]}</div>
+    let tc2Tag = [...selC2A]; //배열의 갯수는 probs의 갯수에 따름 -> 전개연산자(...) 사용
+
+    tc2Tag = tc2Tag.map((item) => 
+        <div className={item[1] === selC2 ? "tc2Sel" : "tc2Tag"} key={[...item]} onClick={()=> handleSelect(item)}>{item[1]}</div>
+
     );
 
     return(
