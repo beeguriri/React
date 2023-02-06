@@ -84,6 +84,7 @@ ul {
 .detail img {
     width: 50vw;
     height: 35vh;
+    border-radius: 10px;
 }
 
 ul > li {
