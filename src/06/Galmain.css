@@ -24,6 +24,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: top;
+    margin-top: 30px;
 }
 
 .gc1, .gdt {
@@ -50,9 +51,10 @@
 
 .gdt {
     width: 60vw;
-    height: 60vh;
+    height: 70vh;
     text-align: left;
     background-color: rgb(228, 240, 255);
+    border-radius: 10px;
 }
 
 .c1Tag, .c1Sel{
@@ -82,8 +84,8 @@ ul {
 }
 
 .detail img {
-    width: 50vw;
-    height: 35vh;
+    width: 600px;
+    height: 400px;
     border-radius: 10px;
 }
 
