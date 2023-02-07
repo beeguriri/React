@@ -50,9 +50,10 @@
 }
 
 .gdt {
-    width: 60vw;
+    width: 850px;
     height: 70vh;
-    text-align: left;
+    justify-content: top;
+    align-items: center;
     background-color: rgb(228, 240, 255);
     border-radius: 10px;
 }
@@ -61,7 +62,7 @@
     display: flex;
     width: 23vw;
     height: 7vh;
-    border: 1px solid gray;
+    border: 1px solid rgb(151, 150, 150);
     border-radius: 10px;
     justify-content: center;
     align-items: center;
@@ -79,7 +80,8 @@ ul {
     list-style: none;
     display: flex;
     flex-direction: column;
-    width: 50vw;
+    justify-content: center;
+    align-items: center;
     margin-left: 0px;
 }
 
@@ -90,12 +92,15 @@ ul {
 }
 
 ul > li {
+    width: 600px;
     display: flex;
     justify-content: left;
     align-items: left;
+    margin-bottom: 5px;
 }
 
 .galTitle {
+    width: 600px;
     font-size: 30px;
     font-weight: bold;
     font-style: italic;
@@ -112,9 +117,27 @@ ul > li {
 .galPhotographyLocation {
     font-size: 20px;
     font-weight: bold;
+    color: rgb(82, 82, 82);
 }
 
 .galPhotographer, .galPhotographyMonth {
     font-size: 17px;
     font-weight: bold;
+}
+
+.galPhotographer {
+    color: rgb(33, 33, 147);
+    font-weight: bold;
+}
+
+.galPhotographyMonth {
+    font-style: italic;
+    color: rgb(82, 82, 82);
+}
+
+.galSearchKeyword {
+    color : rgb(103, 155, 176);
+    font-size: 15px;
+    font-style: italic;
+    text-decoration: underline;
 }

@@ -20,7 +20,7 @@ const Galmain = ({c1, dataAll}) => {
     //선택 된 카테고리에 따라 세부내용 선택
     useEffect (()=> {
         if (selC1) {
-            setSelData(dataAll.filter((item) => item.galTitle === selC1)[0])
+            setSelData(dataAll.filter((item) => item.galTitle === selC1)[0]);
         }
     }, [selC1])
 
@@ -39,7 +39,7 @@ const Galmain = ({c1, dataAll}) => {
 
             <div className="main">
                 <Gc1 c1 = {c1} selC1 = {selC1} setSelC1 = {setSelC1}/>
-                <Gdt selData = {selData} />      
+                {selData && <Gdt selData = {selData} />}
             </div>
         
         </div>
