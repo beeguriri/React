@@ -3,14 +3,14 @@ import './App.css';
 //import Mydiv from './03/Mydiv';
 //import Frcst from './04/Frcst';
 //import Taccident from './05/Taccident';
-//import Gal from './06/Gal';
-import Mycom from './07/Mycom';
+import Gal from './06/Gal';
+//import Mycom from './07/Mycom';
 
 const App = () => {              
   
   return ( 
     <div>
-      <Mycom />
+      <Gal />
     </div>
   );
 }
@@ -23,6 +23,8 @@ export default App;
 //<Frcst />
 //<Taccident />
 //<Gal />
+//<Mycom />
+
 
 
 
