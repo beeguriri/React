@@ -10,11 +10,16 @@
   + 필요한 데이터 형태로 가공 object <-> array
   + 대분류 -> 중분류 선택한 값이 detail에 뜨도록 함
 + 06 : 한국관광공사 관광사진정보
+  + 06-1 : 교수님 코드 (참고용)
+  + db : Gal.js 내 jason데이터 옮겨놓기
   + jason object데이터 가져오기
   + 카테고리 선택하면 해당 값이 detail에 뜸
   + image url을 가지고 페이지에서 사진으로 뿌려주기
   + 각 list별 폰트 사이즈 등등 다르게 하기
+  + useRef사용, 카테고리 검색박스 만들기
 + 07 : useState, useEffect, useRef, form 사용
++ 08 : form태그, useRef로 form value 가져오기
+
 ## React Project 1 : 시계만들기
 + https://reactclock-209e7.web.app/
 
