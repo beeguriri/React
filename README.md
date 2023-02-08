@@ -14,7 +14,7 @@
   + 카테고리 선택하면 해당 값이 detail에 뜸
   + image url을 가지고 페이지에서 사진으로 뿌려주기
   + 각 list별 폰트 사이즈 등등 다르게 하기
-
++ 07 : useState, useEffect, useRef, form 사용
 ## React Project 1 : 시계만들기
 + https://reactclock-209e7.web.app/
 
