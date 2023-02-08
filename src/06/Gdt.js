@@ -2,18 +2,16 @@ const Gdt = ({selData}) => {
 
     //console.log("selData.galSearchKeyword", selData.galSearchKeyword)
     return (
-        <div className="gdt">
             <div className="detail">
                 <ul>
-                    <li className="galWebImageUrl"><img src = {selData.galWebImageUrl}></img></li>
+                    <li className="galWebImageUrl"><img src = {selData.galWebImageUrl} /></li>
                     <li className="galTitle">{selData.galTitle}</li>
                     <li className="galPhotographyLocation">{selData.galPhotographyLocation}</li>
                     <li className="galPhotographer">{selData.galPhotographer}</li>
-                    <li className="galPhotographyMonth">{selData.galPhotographyMonth}</li>
+                    <li className="galPhotographyMonth">{selData.galPhotographyMonth.substr(0,4)}.{selData.galPhotographyMonth.substr(4,2)}</li>
                     <li className="galSearchKeyword">{selData.galSearchKeyword}</li>
                 </ul>
             </div>
-        </div>   
     );
 
 }

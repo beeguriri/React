@@ -1,0 +1,81 @@
+.content {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: top;
+
+    padding: 10px;
+}
+
+.conleft {
+    width: 35vw;
+    height: 80vh;
+
+    display: flex;
+    justify-content: right;
+    align-items: top;  
+    margin: 20px 10px;
+}
+.conleft > ul {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+
+    list-style: none; 
+}
+.uli, .ulis{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gainsboro;
+    margin-bottom: 10px;
+}
+.uli:hover , .uli:active, .ulis   {
+    background-color: gainsboro;
+    color: blue;
+    font-weight: bold;
+}    
+.conright {
+    width: 50vw;
+    height: 80vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: top;  
+    margin: 10px; 
+}
+
+.concard {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gainsboro;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 0px;
+    background-color: darkblue;
+    color: white;
+}
+
+.concard > div {
+    width: 80%;
+    font-size: 1.2em;
+} 
+
+.concard >.conkw {
+    font-size: 0.8em;
+    color: aliceblue;
+}
+.concard img {
+    width : 100%;
+    height: 200px;
+}

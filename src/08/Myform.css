@@ -1,0 +1,41 @@
+input[type=text], input[type=password], select {
+    width:200px;
+    padding: 12px 20px;
+    margin: 8px 0px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    
+    border: 3px solid #a51111;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    margin: 5px;
+    font-size: 16px;
+}
+
+.button:hover, .button:active {
+    background-color: darkblue;
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    font-size: 16px;
+    margin: 5px;
+}
+
+#msg span {
+    color: red;
+    font-weight: bold;
+}

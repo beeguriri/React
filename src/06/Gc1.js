@@ -19,9 +19,7 @@ const Gc1 = ({c1, selC1, setSelC1}) => {
             <div className="box1">
                 {c1Tag}
             </div>
-
-        </div>    
-    
+        </div>
     );
 }
 
