@@ -39,6 +39,7 @@ export default Gdt;
         <span className="imgDt"><img src = {selData["galWebImageUrl"]}></img></span>
         </li>
     )
-                <ul>{dTag}</ul>
+                <ul>{dTag}</ul>                    {props.pickedContent["galPhotographyMonth"].slice(0,4)}년 {props.pickedContent["galPhotographyMonth"].slice(4,6)}월
+
 
 */
