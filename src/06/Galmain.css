@@ -1,3 +1,8 @@
+* {
+    margin : 0px;
+    padding : 0px;
+}
+
 .content {
     width: 100vw;
     height: 100vh;
@@ -39,13 +44,14 @@
 }
 
 .contright {
-    width: 60vw;
-    height: 70vh;
+    width: 300px;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
     justify-content: top;
     align-items: center;
-    background-color: rgb(228, 240, 255);
+/*    background-color: rgb(228, 240, 255);*/
     border-radius: 10px;
-    margin-left: 30px;
 }
 
 .formbox {
@@ -55,6 +61,7 @@
     justify-content: center;
     align-items: center;
 }
+
 .gc1 {
     width: 30vw;
     height: 80%;
@@ -63,6 +70,15 @@
     flex-direction: column;
     justify-content: top;
     align-items: center;
+}
+
+.detail {
+    width: 300px;
+    height: 400px;
+    background-color: darkblue;
+    margin-right : 5px;
+    padding-top : 30px;
+    border-radius: 10px;
 }
 
 .box1 {
@@ -94,68 +110,76 @@
 }
 
 ul {
+    width: 300px;
     list-style: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-left: 0px;
+    padding : 0px;
+    margin : 0px;
 }
 
-.detail img {
-    width: 600px;
-    height: 400px;
+.contright img {
+    width: 200px;
+    height: 200px;
     border-radius: 10px;
+    padding : 0px;
+    margin : 0px;
 }
 
-ul > li {
-    width: 600px;
+ul li {
+    width: 200px;
     display: flex;
     justify-content: left;
     align-items: left;
     margin-bottom: 5px;
+    padding : 0px;
+    margin : 0px;
 }
 
 .galTitle {
-    width: 600px;
-    font-size: 30px;
+    font-size: 18px;
     font-weight: bold;
     font-style: italic;
     background-color: darkblue;
     color: white;
 }
+
+/*
 @keyframes blink-effect { 50% { opacity: 50%; } } 
 .galTitle {
     background-color: darkblue;
     font-weight: bold;
     animation: blink-effect 0.8s step-end infinite; 
-}
+}*/
 
 .galPhotographyLocation {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
-    color: rgb(82, 82, 82);
+    color: white;
 }
 
 .galPhotographer, .galPhotographyMonth {
-    font-size: 17px;
+    font-size: 13px;
     font-weight: bold;
 }
 
 .galPhotographer {
-    color: rgb(33, 33, 147);
+    color:white;
     font-weight: bold;
 }
 
 .galPhotographyMonth {
     font-style: italic;
     font-weight: bold;
-    color: rgb(82, 82, 82);
+    color: white;
 }
 
 .galSearchKeyword {
     color : rgb(103, 155, 176);
-    font-size: 15px;
+    font-size: 11px;
     font-style: italic;
     text-decoration: underline;
 }
@@ -181,4 +205,15 @@ input[type=text] {
     outline: none;
 }
 
+select {
+    width:200px;
+    padding: 12px 20px;
+    margin: 8px 0px;
+    box-sizing: border-box;
+    outline: none;
+}
 
+select:focus {
+    
+    border: 3px solid #a51111;
+}

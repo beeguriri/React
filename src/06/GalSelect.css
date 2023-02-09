@@ -1,0 +1,108 @@
+* {
+    margin : 0px;
+    padding : 0px;
+}
+
+.content {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    padding: 10px;
+}
+/*
+.conleft {
+    width: 35vw;
+    height: 80vh;
+    display: flex;
+    justify-content: right;
+    align-items: top;  
+    margin: 20px 10px;
+}
+.conleft > ul {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    list-style: none; 
+} 
+.uli, .ulis{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gainsboro;
+    margin-bottom: 10px;
+}
+.uli:hover , .uli:active, .ulis   {
+    background-color: gainsboro;
+    color: blue;
+    font-weight: bold;
+}    
+*/
+
+.conright {
+    width: 50vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;  
+    margin: 10px; 
+}
+
+.concard {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gainsboro;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 0px;
+    background-color: darkblue;
+    color: white;
+    font-weight: bold;
+}
+
+.concard > div {
+    width: 80%;
+    font-size: 1.7em;
+} 
+
+.concard >.connm {
+    font-size: 1.2em;
+    color: aliceblue;
+    font-weight: bold;
+}
+
+.concard >.conkw {
+    font-size: 0.8em;
+    color: aliceblue;
+    font-weight: normal;
+}
+
+.concard img {
+    width : 100%;
+    height: 300px;
+}
+
+select {
+    width:40vw;
+    padding: 12px 20px;
+    margin: 8px 0px;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 1.2em;
+    border : 5px solid darkblue;
+}
+
+/* select:focus {
+    
+    border: 5px solid darkblue;
+} */
