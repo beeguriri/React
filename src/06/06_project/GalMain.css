@@ -1,0 +1,153 @@
+* {
+    margin : 0px;
+    padding : 0px;
+}
+
+.content {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+}
+
+.header {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: darkblue;
+    color: white;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.conleft {
+    width: 35vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: top;  
+    margin: 40px 10px;
+}
+
+.box1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.conleft > ul {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    list-style: none; 
+} 
+.c1Tag, .c1Sel{
+    display: flex;
+    width: 23vw;
+    height: 6vh;
+    border: 1px solid rgb(151, 150, 150);
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 7px;
+    font-size: 17px;
+}
+
+.c1Tag:hover, .c1Tag:active, .c1Sel {
+    background-color: darkblue;
+    color: white;
+    font-weight: bold;
+}   
+
+.conright {
+    width: 50vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: left;  
+    margin: 10px; 
+}
+
+.concard {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gainsboro;
+    border-radius: 20px;
+    padding: 0px;
+    background-color: darkblue;
+    color: white;
+    font-weight: bold;
+}
+
+.concard > div {
+    width: 80%;
+    font-size: 1.7em;
+} 
+
+.concard >.connm {
+    font-size: 1.2em;
+    color: aliceblue;
+    font-weight: bold;
+}
+
+.concard >.conkw {
+    font-size: 0.8em;
+    color: aliceblue;
+    font-weight: normal;
+}
+
+.concard img {
+    width : 100%;
+    height: 300px;
+}
+
+input[type=text] {
+    width:400px;
+    padding: 12px 20px;
+    margin: 8px 0px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+button {
+    background-color: darkblue;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    margin: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+select {
+    width:490px;
+    padding: 12px 20px;
+    margin: 8px 0px;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 1.2em;
+    border : 5px solid darkblue;
+}
+
