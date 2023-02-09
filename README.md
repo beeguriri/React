@@ -11,6 +11,7 @@
   + 필요한 데이터 형태로 가공 object <-> array
   + 대분류 -> 중분류 선택한 값이 detail에 뜨도록 함
 + 06 : 한국관광공사 관광사진정보
+  + #### 06-project : `hosting`
   + 06-1 : 교수님 코드 (참고용)
   + db : Gal.js 내 jason데이터 옮겨놓기
   + jason object데이터 가져오기
@@ -36,7 +37,8 @@
 + https://reactclock-209e7.web.app/
 
 ## React Project 2 : 한국관광공사 관광사진정보
-+ https://visitkoreaphoto-3e987.web.app
++ ### https://visitkoreaphoto-3e987.web.app
++ 관련파일 : React/src/06/06-project
 
 ##      
   + Local Path D:\HJ\React\Work\lecreact
