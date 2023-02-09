@@ -1,4 +1,4 @@
-import data from '../db/data.json';
+import data from './db/data.json';
 import Ghead from './Ghead';
 import GalCard from './GalCard';
 import './GalMain.css';
@@ -18,10 +18,31 @@ const GalMain = () => {
     //검색창 제어
     const txtR = useRef();
 
+    //컴포넌트가 처음 랜더링이 일어났을때 한번만 실행
+    useEffect(() => {
+        txtR.current.focus();
+
+        setC1Tag(c1.map((item) => 
+        <li className={item === selC1 ? "c1Sel" : "c1Tag"} key={item} 
+            onClick={()=> handleSearch(item)}> {item} </li>))
+    },[]);
+
     //태그 선택 함수
     const handleSearch = (item) => {
         setSelC1(item);
     };
+
+    //제목으로 검색 된 태그 보여줌
+    const showC1 = () => {
+
+        let temp = c1.filter((i)=> i.includes(txtR.current.value))
+
+        setC1Tag(
+            temp.map((item) => 
+            <li className={item === selC1 ? "c1Sel" : "c1Tag"} key={item} 
+                onClick={()=> handleSearch(item)}> {item} </li>
+        ));
+    }
 
     //카테고리 선택정보 랜더링
     useEffect (()=> {
@@ -35,28 +56,10 @@ const GalMain = () => {
         }
     }, [selC1])
 
-    //선택 된 세부내용 뿌려줌
+    //세부내용 선택될 떄 마다 랜더링
     useEffect(()=>{
         console.log("selItem",selItem);
     },[selItem]);
-
-    const showC1 = () => {
-
-        let temp = c1.filter((i)=> i.includes(txtR.current.value))
-
-        setC1Tag(
-            temp.map((item) => 
-            <div className={item === selC1 ? "c1Sel" : "c1Tag"} key={item} onClick={()=> handleSearch(item)}> {item} </div>
-        ));
-
-    }
-
-
-    //컴포넌트가 처음 랜더링이 일어났을때 한번만 실행
-    useEffect(() => {
-        txtR.current.focus();
-    },[]);
-
 
     //select box 제어
     const selR = useRef();
@@ -76,8 +79,6 @@ const GalMain = () => {
         setSelItem(temp[0]);
     };
 
-
-
     return(
         <div className="content">
 
@@ -89,20 +90,24 @@ const GalMain = () => {
             <div className="conleft">
                 <div className="formbox">
                     <form>
+                        <div className="selbox">
+                            <select ref={selR} name="sel1" onChange={handleSel}>
+                                <option value="" defaultValue>항목을 선택하세요</option>
+                                {optionTag}
+                            </select>
+                        </div>
 
-                        <select ref={selR} name="sel1" onChange={handleSel} className="selbox">
-                            <option value="" defaultValue>항목을 선택하세요</option>
-                            {optionTag}
-                        </select>
-
-                        <input ref={txtR} type="text" name="txt1" onChange={showC1} placeholder="검색어를 입력하세요." className="textbox"/>
-                        <button type="reset" className="textbox">취소</button>
-                    
+                        <div className="textbox">
+                            <input ref={txtR} type="text" name="txt1" onChange={showC1} placeholder="검색어를 입력하세요." />
+                            <button type="reset" className="textbox">취소</button>
+                        </div>
                     </form>
                 </div>
 
-                <div className="box1">
-                    {c1tag}
+                <div className="tagbox">
+                    <ul>
+                        {c1tag}
+                    </ul>
                 </div>
             </div>
 
