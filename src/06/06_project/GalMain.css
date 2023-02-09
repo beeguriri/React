@@ -4,19 +4,19 @@
 }
 
 .content {
-    width: 100vw;
-    height: 100vh;
+    width : 100vw;
+    height : 100vh;
     display: flex;
     flex-direction: column;
     justify-content: top;
     align-items: center;
+    border : 1px solid black
 }
 
 .header {
-    width: 100vw;
-    height: 10vh;
+    width : 100vw;
+    height : 10vh;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: darkblue;
@@ -24,125 +24,56 @@
 }
 
 .main {
+    width : 100vw;
+    height : 90vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: top;
+    margin-top: 20px;
 }
 
-.conleft {
-    width: 35vw;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: top;
-    align-items: center;  
-    margin: 40px 10px;
-}
-
-.box1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.conleft > ul {
-    width: 80%;
+.conleft{
+    width : 350px;
+    height : 80vh;
     display: flex;
     flex-direction: column;
     justify-content: top;
     align-items: center;
-    list-style: none; 
-} 
-.c1Tag, .c1Sel{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20vw;
-    height: 6vh;
-    border: 1px solid rgb(151, 150, 150);
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.conright{
+    width : 600px;
+    height : 80vh;
+    background-color: darkblue;
+    margin-top: 20px;
+    margin-left: 10px;
     border-radius: 10px;
-    margin: 7px;
-    font-size: 17px;
-}
-
-.c1Tag:hover, .c1Tag:active, .c1Sel {
-    background-color: darkblue;
-    color: white;
-    font-weight: bold;
-}   
-
-.conright {
-    width: 50vw;
-    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: top;
-    align-items: left;  
-    margin: 10px; 
+    align-items: center;
+    
 }
 
-.concard {
-    width: 80%;
-    height: 80%;
+.formbox {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid gainsboro;
-    border-radius: 20px;
-    padding: 0px;
-    background-color: darkblue;
-    color: white;
-    font-weight: bold;
 }
 
-.concard > div {
-    width: 80%;
-    font-size: 1.7em;
-} 
-
-.concard >.connm {
-    font-size: 1.2em;
-    color: aliceblue;
-    font-weight: bold;
+.tagbox {
+    margin-top: 10px;
 }
 
-.concard >.conkw {
-    font-size: 0.8em;
-    color: aliceblue;
-    font-weight: normal;
-}
+.selbox {
 
-.concard img {
-    width : 100%;
-    height: 300px;
-}
-
-input[type=text] {
-    width:400px;
-    padding: 12px 20px;
-    margin: 8px 0px;
-    box-sizing: border-box;
-    outline: none;
-}
-
-button {
-    background-color: darkblue;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-flex;
-    margin: 15px;
-    font-size: 16px;
-    border-radius: 5px;
 }
 
 select {
-    width:490px;
+    width:100%;
     padding: 12px 20px;
     margin: 8px 0px;
     box-sizing: border-box;
@@ -151,3 +82,87 @@ select {
     border : 5px solid darkblue;
 }
 
+.textbox {
+    width:350px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type=text] {
+    padding: 12px 20px;
+    width:70vw;
+    margin: 8px 0px;
+    box-sizing: border-box;
+    outline: none;
+    margin-right: 10px;
+}
+
+button {
+    background-color: darkblue;
+    width: 15vw;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.tagbox ul {
+    width:350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.c1Tag, .c1Sel {
+    width: 100%;
+    height : 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin: 7px;
+}
+
+.c1Tag:hover, .c1Tag:active, .c1Sel {
+    background-color: darkblue;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.concard {
+    width: 500px;
+    margin-top: 20px;
+    padding : 20px;
+}
+
+.concard img {
+    width : 100%;
+    height : 300px;
+    text-align: center;
+}
+
+.contitle {
+    font-size: 1.7em;
+    color: aliceblue;
+    font-weight: bold;
+}
+
+.connm {
+    font-size: 1.2em;
+    color: aliceblue;
+}
+
+.conkw {
+    font-size: 0.9em;
+    color: aliceblue;
+    margin-top: 20px;
+}
