@@ -31,7 +31,8 @@
     + `<Routes><Route path="url표시" element={연결할 컴포넌트}/></Route></Routes>`
   + #### RouterNv.js : `import {Link}`
     + `<Link to="url"></Link>`
-
++ 10 : 날씨예보
+  + 장기예보, 단기예보
 
 ## React Project 1 : 시계만들기
 + https://reactclock-209e7.web.app/
