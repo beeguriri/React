@@ -13,7 +13,7 @@ const RouterMain = () => {
 
             <Routes>
                 <Route path="/" element={<RouterHome />} />    
-                <Route path="/p1" element={<RouterPage1 />} />    
+                <Route path="/p1/:item" element={<RouterPage1 />} />    
                 <Route path="/p2" element={<RouterPage2 />} />
             </Routes>        
         </>
