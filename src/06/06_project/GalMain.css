@@ -46,16 +46,15 @@
 
 .conright{
     width : 600px;
-    height : 80vh;
+    height : 60vh;
     background-color: darkblue;
-    margin-top: 20px;
+    margin-top: 25px;
     margin-left: 10px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: top;
     align-items: center;
-    
 }
 
 .formbox {

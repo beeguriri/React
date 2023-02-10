@@ -1,4 +1,4 @@
-import data from './db/data.json';
+import data from '../db/data.json';
 import Ghead from './Ghead';
 import GalCard from './GalCard';
 import './GalMain.css';
