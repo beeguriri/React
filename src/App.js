@@ -8,15 +8,16 @@ import './App.css';
 //import Gal from './06/06-1/Gal'; >> 교수님파일
 //import Mycom from './07/Mycom';
 //import Myform from './08/Myform';
-import RouterMain from './09/RouterMain'
+//import RouterMain from './09/RouterMain'
 import { BrowserRouter } from 'react-router-dom';
 //import GalMain from './06/06_project/GalMain';
+import Wmain from './10/Wmain';
 
 const App = () => {              
   
   return ( 
       <BrowserRouter>
-        <RouterMain />
+        <Wmain />
       </BrowserRouter>
   );
 }
@@ -33,6 +34,8 @@ export default App;
 //<GalSelect />
 //<Mycom />
 //<Myform />
+//<WRouterMain />
+
 
 
 
