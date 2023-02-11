@@ -3,13 +3,13 @@
     margin: 0px;
 }
 
-.cont {
+.content {
     width : 420px;
     height : 100vh;
-    background-color: beige;
+    background-color: rgb(234, 249, 255);
 }
 
-.wh {
+.wheader {
     background-color: darkblue;
     color: whitesmoke;
     display: flex;
@@ -22,7 +22,7 @@
     font-size: 1.3em;
 }
 
-.hbt {
+.whdiv {
     width:100%;
     border: white;
     border-radius: 5px;
@@ -34,7 +34,7 @@
     padding-bottom: 10px;
 }
 
-.menubox {
+.wmenu {
     height : 80vh;
     display: flex;
     flex-direction: column;
@@ -42,7 +42,93 @@
     align-items: center;
 }
 
-.menubox ul {
+.w1 {
+    height : 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.w2 {
+    height : 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.w1div {
+    width: 75%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.sp0 {
+    width: 150px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin: 5px;
+    padding: 10px;
+}
+
+.sp1 {
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid grey;
+    margin: 5px;
+    padding: 10px;
+    color: darkblue;
+    font-weight: bold;
+}
+
+.sp2 {
+    width: 80px;
+    display: flex;
+    justify-content: left;
+    margin: 5px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.w2div {
+    width: 80%;
+    height: 60vh;
+}
+
+.w2btn {
+    background-color: rgb(211, 241, 253);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px
+}
+
+.w2btn > button {
+    width: 100px;
+    background-color: rgb(239, 237, 237);
+    border:none;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 6px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.w2btn > button:hover, .w2btn > button:active {
+    color: whitesmoke;
+    background-color: darkblue;
+}
+
+.wmenu ul {
     width:100%;
     display: flex;
     flex-direction: column;
@@ -52,20 +138,21 @@
     color: darkblue;
 }
 
-.menubox li {
+.wmenu li {
     border: 1px gray solid;
     color : darkblue;
     background-color: darkblue;
     border-radius: 10px;
     width: 50%;
+    height:40px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
-    margin: 10px;
+    margin: 20px;
 }
 
-.menubox li:hover, .menubox li:active {
+.wmenu li:hover, .menubox li:active {
     color: whitesmoke;
     background-color: gray;
     padding: 10px;
@@ -76,4 +163,35 @@
 a:visited, a:link {
     text-decoration: none;
     color: whitesmoke;
+}
+
+.w2div > ul {
+    border: 2px solid darkblue;
+    border-radius: 10px;
+    margin: 15px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding : 10px;
+}
+
+/*.w2div li {
+    font-size: 15px;
+}*/
+
+.day {
+    font-size: 0.9em;
+    color: brown;
+}
+
+.day2 {
+    font-size: 0.8em;
+}
+
+.data {
+    font-size: 1.1em;
+    color: brown;
+    font-weight: bold;
 }
