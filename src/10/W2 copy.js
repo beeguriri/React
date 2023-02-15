@@ -43,7 +43,7 @@ const W2 = () => {
 
             <ul>
                 <li className="day">{day}일 후</li>
-                <li className="day2">날씨예보</li>
+                <li>날씨예보</li>
                 <li className="data">{item}</li>
             </ul>
     );
