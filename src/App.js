@@ -9,32 +9,39 @@ import './App.css';
 //import Mycom from './07/Mycom';
 //import Myform from './08/Myform';
 //import RouterMain from './09/RouterMain'
-import { BrowserRouter } from 'react-router-dom';
+//import { BrowserRouter } from 'react-router-dom';
 //import GalMain from './06/06_project/GalMain';
-import Wmain from './10/Wmain';
+//import Wmain from './10/Wmain';
+//import Async from './11/Async';
+import Boxoffice from './11/Boxoffice'
 
 const App = () => {              
   
   return ( 
-      <BrowserRouter>
-        <Wmain />
-      </BrowserRouter>
+    //<Box />
+    //<Frcst />
+    //<Mydiv />
+    //<Frcst />
+    //<Taccident />
+    //<Gal />
+    //<GalMain />  호스팅버전
+    //<GalSelect />
+    //<Mycom />
+    //<Myform />
+    //<WRouterMain />
+    // <BrowserRouter>
+    //   <Wmain />
+    // </BrowserRouter>
+
+    //<Async />
+      <Boxoffice />
+
   );
 }
 
 export default App;             
 
-//<Box />
-//<Frcst />
-//<Mydiv />
-//<Frcst />
-//<Taccident />
-//<Gal />
-//<GalMain />  호스팅버전
-//<GalSelect />
-//<Mycom />
-//<Myform />
-//<WRouterMain />
+
 
 
 
