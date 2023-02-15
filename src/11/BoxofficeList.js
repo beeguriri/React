@@ -16,18 +16,13 @@ const BoxofficeList = ({targetDt}) => {
         fetch(url)
         .then((resp) => resp.json())
         .then((data)=>{
+
             console.log(data.boxOfficeResult.dailyBoxOfficeList)
+            
         })
         .catch((err)=>console.log(err))
 
     },[]);
-
-        useEffect(()=>{
-
-            setMvList();
-
-
-        },[mvList])
 
     return(
         <>
