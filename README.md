@@ -55,9 +55,9 @@
 + 10 : 날씨예보
   + 장기예보, 단기예보 정보 가져오기
   + Route, Link 사용
-  
++ 11 : 박스오피스
+  + 실시간 api 파일 가져오기 (fetch 이용)
 + db : json 파일 저장
-
 
 ##      
   + Local Path D:\HJ\React\Work\lecreact
