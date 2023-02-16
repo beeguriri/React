@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 const BoxofficeList = ({targetDt}) => {
     
     const [mvList, setMvList] = useState();
+    let mvdata;
 
     //맨처음 랜더링 시
     useEffect(() => {
@@ -17,12 +18,21 @@ const BoxofficeList = ({targetDt}) => {
         .then((resp) => resp.json())
         .then((data)=>{
 
-            console.log(data.boxOfficeResult.dailyBoxOfficeList)
-            
+            console.log('fetch내', data.boxOfficeResult.dailyBoxOfficeList)
+            mvdata = data.boxOfficeResult.dailyBoxOfficeList;
         })
         .catch((err)=>console.log(err))
 
     },[]);
+
+
+    useEffect(() => {
+
+        console.log('targetdt useEffect', mvdata)
+        setMvList(mvList);
+
+
+    },[targetDt])
 
     return(
         <>
