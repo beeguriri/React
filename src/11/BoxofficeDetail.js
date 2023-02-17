@@ -20,31 +20,34 @@ const BoxofficeDetail = ({movieCd}) => {
             let keys = {'영화명':'movieNm', 
                         '개봉일':'openDt',
                         '제작상태':'prdtStatNm',
-                        '영화형태':'typeNm',
+                        '영화구분':'typeNm',
                         '감독':'directors'}
 
             let tags = [];                
             for(let [k, v] of Object.entries(keys)) {
                 
                 if (k==='감독') {
-                    <div key={k}>
-                    <span>{k}</span>
-                    <span>{temp[v][0]}</span>
-                    </div>
-
+                    tags.push(
+                        <div className="row" key={k}>
+                            <span className="sp0" key={k}>{k}</span>
+                            <span className="sp1" key={temp[v][0].peopleNm}>{temp[v][0].peopleNm}</span>
+                        </div>
+                    )
                 }
-                else {tags.push(
-                    <div key={k}>
-                        <span>{k}</span>
-                        <span>{temp[v]}</span>
-                    </div>
-                )}
+                else {
+                    tags.push(
+                        <div className="row" key={k}>
+                            <span className="sp0" key={k}>{k}</span>
+                            <span className="sp1" key={temp[v]}>{temp[v]}</span>
+                        </div>
+                    )
+                }
                 
             }
 
             setMTag(tags);
 
-            console.log('temp', temp)
+ //           console.log('temp', temp)
 
         }
         catch(err) {
@@ -52,47 +55,10 @@ const BoxofficeDetail = ({movieCd}) => {
         }
     }
     
-    //최초 랜더링 시
-    useEffect(() => {
-        setMTag(movieCd);
-    },[]);
-
     useEffect(() => {
         getData();
     },[movieCd]);
 
-    /*
-    //movieCd 선택 되었을 때 실행
-    useEffect(() => {
-        
-        if(!movieCd) return; 
-
-        const apikey = 'dd5b0afc0511d7102b761b9afc283a08';
-        let url = `http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieInfo.json?key=${apikey}&movieCd=${movieCd}`;
-
-        fetch(url)
-        .then((resp) => resp.json())    
-        .then((data)=>{                 
-
-            console.log('fetch내', data)
-            let temp = data.movieInfoResult.movieInfo;
-            //console.log('temp', temp)
-
-            temp = Object.entries(temp).map((item) => {
-
-                console.log('item0', item[0])
-                console.log('item1', item[1])
-            })
-
-
-            setMvDetail(temp);
-
-        })
-        .catch((err)=>console.log(err))
-
-    },[movieCd]);
-
-*/
     return(
         <>
             <ul>
