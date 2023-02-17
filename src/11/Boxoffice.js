@@ -42,7 +42,7 @@ const Boxoffice = () => {
             </div>
 
             <div className="mvmain">
-                <BoxofficeList targetDt={targetDt}/>
+                {targetDt && <BoxofficeList targetDt={targetDt}/>}
             </div>
         </>
     );

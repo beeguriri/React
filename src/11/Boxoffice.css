@@ -38,4 +38,54 @@
 
 .mvmain {
     width:100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.conleft, .conright {
+    width : 45vw;
+    height : 61vh;
+    padding: 10px;
+    margin : 15px;
+}
+
+.conright {
+    background-color: bisque;
+}
+
+.row, .rowh {
+    height: 30px;
+    border-bottom: 1px solid grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.row:hover, .row:active {
+    background-color: rgb(249, 167, 13);
+}
+
+.rowh {
+    padding: 10px;
+    background-color: blanchedalmond;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.sp0, .sp1, .sp2 {
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sp0, .sp2 {
+    width:20%;
+}
+
+.sp1 {
+    width:60%;
 }
