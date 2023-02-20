@@ -7,6 +7,8 @@ const Async = () => {
     .then((data) => console.log(data))  //비동기 : json데이터가 있을때 object type으로 반환
     .catch((err) => console.log(err))   //리젝트일때 실행
 
+    console.log('커밋확인용')
+
     return (
         <>
         </>
