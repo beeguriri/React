@@ -1,0 +1,135 @@
+* {
+    margin : 0px;
+    padding : 0px;
+}
+
+.mvhead {
+    width:100vw;
+    height : 80px;
+    background-color: rgb(249, 167, 13);
+    display: flex;
+    /* flex-direction: row; */
+    align-items: center;
+    justify-content:center;
+}
+
+.mvhead > h1 {
+    width : 70%;
+    display: flex;
+    justify-content: center;
+}
+
+.mvhead > form {
+    width : 30%;
+    display: flex;
+}
+
+.mvhead input {
+    width: 200px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.mvhead input:focus {
+    background-color: bisque;
+}
+
+.mvmain {
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+
+}
+
+.conleft {
+    width : 45vw;
+    height : 61vh;
+    padding: 10px;
+    margin : 15px;
+}
+
+.conright {
+    width : 45vw;
+    height : 50vh;
+    padding: 10px;
+    margin : 15px;
+    background-color: bisque;
+    margin-top: 30px;
+    padding-top:20px;
+}
+
+.conleft .row, .conleft .rowh {
+    height: 30px;
+    border-bottom: 1px solid grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    font-size: 1.0em;
+
+}
+
+.conleft .row:hover, .conleftt .row:active {
+    background-color: rgb(249, 167, 13);
+}
+
+.conleft .rowh {
+    padding: 10px;
+    background-color: blanchedalmond;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.conleft .sp0, .conleft .sp1, .conleft .sp2 {
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conleft .sp0, .conleft .sp2 {
+    width:20%;
+}
+
+.conleft .sp1 {
+    width:60%;
+}
+
+.conright .row {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.conright .sp0, .conright .sp1, .conright .sp11, .conright .sp12 {
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9em;
+}
+
+.conright .sp0 {
+    width:20%;
+    justify-content: right;
+    padding-right: 20px;
+}
+
+.conright .sp1 {
+    width:65%;
+}
+.conright .sp11 {
+    width:65%;
+    font-weight: bold;
+    font-size: 1.1em;
+
+}
+.conright .sp12 {
+    width:65%;
+    font-style: italic;
+}

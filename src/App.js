@@ -13,7 +13,8 @@ import './App.css';
 //import GalMain from './06/06_project/GalMain';
 //import Wmain from './10/Wmain';
 //import Async from './11/Async';
-import Boxoffice from './11/Boxoffice'
+//import Boxoffice from './11/Boxoffice'
+import Boxoffice from './11/11_Project/Boxoffice'
 
 const App = () => {              
   
