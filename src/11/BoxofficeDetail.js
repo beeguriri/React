@@ -8,7 +8,7 @@ const BoxofficeDetail = ({movieCd}) => {
     //async 함수를 써야함!
     const getData = async() => {
 
-        const apikey = 'dd5b0afc0511d7102b761b9afc283a08';
+        const apikey = '';
         let url = `http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieInfo.json?key=${apikey}&movieCd=${movieCd}`;
 
         try {
