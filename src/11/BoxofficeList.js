@@ -17,7 +17,7 @@ const BoxofficeList = ({targetDt}) => {
         //부모 컴포넌트에서 &&연산자로 표시해줬으므로 필요없는 코드
         //if(!targetDt) return; 
 
-        const apikey = 'dd5b0afc0511d7102b761b9afc283a08';
+        const apikey = '';
         let url = `http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=${apikey}&targetDt=${targetDt}`;
 
         //console.log(url)
